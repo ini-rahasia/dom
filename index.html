@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div#container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+        }
+
         div > div {
             width: 100px;
             height: 100px;
+            margin: 0 5px;
             border: 1px solid black;
-            display: inline-block;
         }
     </style>
 </head>
 <body>
 
     <div id="container">
-        <div class="display">1</div>
-        <div class="controls">2</div>
-        <div class="under-controls">3</div>
+        <div class="display"></div>
+        <div class="controls"></div>
+        <div class="under-controls"></div>
     </div>
     
     <script>
@@ -26,13 +36,21 @@
 
         const div = document.createElement('div');
         
-        div.style.color = 'blue';                                      
+        div.style.color = 'blue';
         div.style.cssText = 'color: red; background: blue;';
         div.setAttribute('style', 'color: red; background: yellow;');
 
         div.style.backgroundColor = 'green';
         div.style['background-color'] = 'white';
         div.style.cssText = 'background-color: blue;';
+        div.style.color = 'white';
+        div.style.padding = '10px';
+        
+        div.setAttribute('id', 'theDiv');
+        div.textContent = (div.getAttribute('id'));
+
+        div.removeAttribute('id');
+        div.removeAttribute('style');
         
         container.appendChild(div)
         
