@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div > div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
     <div id="container">
-        <div class="display"></div>
-        <div class="controls"></div>
-        <div class="under-controls"></div>
+        <div class="display">1</div>
+        <div class="controls">2</div>
+        <div class="under-controls">3</div>
     </div>
     
     <script>
-        const container = document.querySelector("#container");
+        const container = document.querySelector('#container');
 
-        console.dir(container.firstElementChild);
-        console.dir(container.firstElementChild.nextElementSibling);
-        console.dir(container.lastElementChild);
+        const div = document.createElement('div');
+        
+        div.style.color = 'blue';                                      
+        div.style.cssText = 'color: red; background: blue;';
+        div.setAttribute('style', 'color: red; background: yellow;');
+        
+        container.appendChild(div)
         
     </script>
 </body>
