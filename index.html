@@ -10,19 +10,15 @@
     <div id="container">
         <div class="display"></div>
         <div class="controls"></div>
+        <div class="under-controls"></div>
     </div>
     
     <script>
-        const div = document.querySelectorAll('div');
         const container = document.querySelector("#container");
 
-        const paraAppendChild = document.createElement('p');
-        const paraInsertBefore = document.createElement('p');
-
-        container.appendChild(paraAppendChild);
-        container.insertBefore(paraInsertBefore, document.querySelector('.controls'));
-
-        console.dir(container.removeChild(paraInsertBefore));
+        console.dir(container.firstElementChild);
+        console.dir(container.firstElementChild.nextElementSibling);
+        console.dir(container.lastElementChild);
         
     </script>
 </body>
