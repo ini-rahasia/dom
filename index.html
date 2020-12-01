@@ -16,8 +16,32 @@
         const content = document.createElement('div');
         content.textContent = 'This is the glorious text-content!';
         content.classList.toggle('content')
-
         container.appendChild(content);
+
+        const para = document.createElement('p');
+        para.style.color = 'red';
+        para.textContent = "Hey I'm red!";
+        container.appendChild(para);
+
+        const headingThree = document.createElement('h3');
+        headingThree.style.cssText = 'color: blue';
+        headingThree.textContent = "I'm a blue h3";
+        container.appendChild(headingThree);
+
+        const secondContent = document.createElement('div');
+        secondContent.style.border = '1px solid black';
+        secondContent.style.backgroundColor = 'pink';
+        
+        const firstHeading = document.createElement('h1');
+        firstHeading.textContent = "I'm in a div";
+        secondContent.appendChild(firstHeading);
+
+        const secondPara = document.createElement('p');
+        secondPara.textContent = "ME TOO!";
+        secondContent.appendChild(secondPara);
+
+        container.appendChild(secondContent);
+        
     </script>
 </body>
 </html>
